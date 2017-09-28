@@ -1,0 +1,132 @@
+$color-1-on: #00e3c5;
+$color-1-off: #002922;
+$color-2-on: #00eb23;
+$color-2-off: #002e07;
+$color-3-on: #d9ff00;
+$color-3-off: #252e00;
+
+$glow-spread: 2px;
+$glow-size: 5px;
+
+$board-size: 340px;
+
+$circle-l1-d: 50px;
+$circle-l2-d: 50px;
+$circle-l3-d: 70px;
+
+$circle-l1-distance-x: 100px;
+$circle-l1-distance-y: $board-size/2px - $circle-l1-d/2;
+
+$circle-l2-distance-corner: 80px;
+
+$circle-l3-distance-x: 15px;
+$circle-l3-distance-y: $board-size/2px - $circle-l3-d/2;
+
+.Board {
+  position: relative;
+  width: $board-size;
+  height: $board-size;
+  display: inline-block;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.circle--l1 {
+  background-color: $color-1-off;
+  width: $circle-l1-d;
+  height: $circle-l1-d;
+}
+
+.circle--l1-on {
+  background-color: $color-1-on;
+  box-shadow: 0 0 $glow-size $glow-spread $color-1-on;
+}
+
+.circle--l1-l {
+  left: $circle-l1-distance-x;
+  top: $circle-l1-distance-y;
+}
+
+.circle--l1-r {
+  right: $circle-l1-distance-x;
+  top: $circle-l1-distance-y;
+}
+
+.circle--l1-t {
+  left: $circle-l1-distance-y;
+  top: $circle-l1-distance-x;
+}
+
+.circle--l1-b {
+  left: $circle-l1-distance-y;
+  bottom: $circle-l1-distance-x;
+}
+
+.circle--l2 {
+  background-color: $color-2-off;
+  width: $circle-l2-d;
+  height: $circle-l2-d;
+}
+
+.circle--l2-on {
+  background-color: $color-2-on;
+  box-shadow: 0 0 $glow-size $glow-spread $color-2-on;
+}
+
+.circle--l2-tl {
+  top: $circle-l2-distance-corner;
+  left: $circle-l2-distance-corner;
+}
+
+.circle--l2-tr {
+  top: $circle-l2-distance-corner;
+  right: $circle-l2-distance-corner;
+}
+
+.circle--l2-bl {
+  bottom: $circle-l2-distance-corner;
+  left: $circle-l2-distance-corner;
+}
+
+.circle--l2-br {
+  bottom: $circle-l2-distance-corner;
+  right: $circle-l2-distance-corner;
+}
+
+.circle--l3 {
+  background-color: $color-3-off;
+  width: $circle-l3-d;
+  height: $circle-l3-d;
+
+}
+
+.circle--l3-on {
+  background-color: $color-3-on;
+  box-shadow: 0 0 $glow-size $glow-spread $color-3-on;
+}
+
+.circle--l3-t {
+  left: $circle-l3-distance-y;
+  top: $circle-l3-distance-x;
+}
+
+.circle--l3-r {
+  right: $circle-l3-distance-x;
+  top: $circle-l3-distance-y;
+}
+
+.circle--l3-b {
+  left: $circle-l3-distance-y;
+  bottom: $circle-l3-distance-x;
+}
+
+.circle--l3-l {
+  left: $circle-l3-distance-x;
+  bottom: $circle-l3-distance-y;
+}
